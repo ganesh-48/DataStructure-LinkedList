@@ -1,2 +1,6 @@
+com/linkedlist/INode.java
+ com.linkedlist.INode
+com/linkedlist/MyLinkedList.java
+ com.linkedlist.MyLinkedList
 com/linkedlist/MyNode.java
  com.linkedlist.MyNode

@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MyNodeTest {
+    /*Description-Create a simple Linked list
+    *Add a 3 key values of a node in linked list
+    * Adding 30 and 56 to 70 Linked list sequence
+     */
     @Test
     public void given3NumbersWhenLinkedShouldPassedLinkedListTest() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
