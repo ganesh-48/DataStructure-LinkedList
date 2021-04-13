@@ -26,7 +26,7 @@ public class MyLinkedList {
     }
 
     /*@Description-Created a linked list in sequence
-    *Added a node in the appeending order
+    *Added a node in the appending order
     * firstly added a 56
     * then  append 30 to the 56
     * finally append 30 to 70
@@ -42,6 +42,13 @@ public class MyLinkedList {
                 this.tail.setNext(myNode);
                 this.tail = myNode;
             }
+    }
+
+    //In a linked list inserted the node between the two node
+    public void insert(INode myNode, INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
     }
 
     //printed a nodes

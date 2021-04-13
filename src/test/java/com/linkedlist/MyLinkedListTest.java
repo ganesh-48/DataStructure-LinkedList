@@ -26,6 +26,13 @@ public class MyLinkedListTest {
         Assertions.assertTrue(result);
     }
 
+    /*@Description-Created a linked list in sequence
+     *Added a node in the appending order
+     * firstly added a 56
+     * then  append 30 to the 56
+     * finally append 30 to 70
+     * Linked list sequence:56->30->70
+     */
     @Test
     public void given3NumbersWhenAppendingShouldBeAddedToLast() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
@@ -39,6 +46,23 @@ public class MyLinkedListTest {
         boolean result = myLinkedList.head.equals(myFirstNode) &&
                          myLinkedList.head.getNext().equals(mySecondNode) &&
                          myLinkedList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+
+    //In a linked list inserted the node between the two node
+    @Test
+    public void given3NumbersWhenInsertingSecondInBetweenShouldPassedLinkedListResult() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode, mySecondNode);
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.head.getNext().equals(mySecondNode) &&
+                myLinkedList.tail.equals(myThirdNode);
         Assertions.assertTrue(result);
     }
 }
