@@ -105,4 +105,18 @@ public class MyLinkedList {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
+    /*Search the element in linked list of enter element after which node
+    *After search insert a node into the linked list
+     */
+    public boolean searchAndInsertElement(INode searchNode, INode insertNode) {
+        INode tempNode = this.head;
+        while (tempNode != null){
+            if (tempNode.getKey().equals(searchNode.getKey())){
+                insert(tempNode, insertNode);
+                return true;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return false;
+    }
 }
