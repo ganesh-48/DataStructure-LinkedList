@@ -56,6 +56,18 @@ public class MyLinkedList {
         this.head = head.getNext();
         return tempNode;
     }
+    /*pop the last element in the linked list
+    *The linked list of sequence 56->30
+     */
+    public INode popLast() {
+        INode tempNode = head;
+        while (!tempNode.getNext().equals((tail))){
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        tempNode = tempNode.getNext();
+        return tempNode;
+    }
 
     //printed a nodes
     public void printMyNodes() {

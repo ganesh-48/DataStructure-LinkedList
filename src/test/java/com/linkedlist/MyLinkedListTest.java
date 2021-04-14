@@ -75,12 +75,31 @@ public class MyLinkedListTest {
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add(myFirstNode);
-        myLinkedList.add(mySecondNode);
-        myLinkedList.add(myThirdNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode, mySecondNode);
         myLinkedList.pop();
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(mySecondNode) &&
                          myLinkedList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+
+    /*Delete the last element from linked list
+    *The sequence of linked list is 56->30
+     */
+    @Test
+    void given3NumbersWhenDeleteLastElementInLinkedListShouldPassLinkedList() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode, mySecondNode);
+        myLinkedList.popLast();
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                         myLinkedList.tail.equals(mySecondNode);
         Assertions.assertTrue(result);
     }
 }
