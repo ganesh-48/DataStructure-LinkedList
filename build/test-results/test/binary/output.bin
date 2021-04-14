@@ -1,2 +1,4 @@
-My Nodes: 56->30->70
 My Nodes: 56->30->40->70
+.Linked List size before deleting element : 4
+-Linked List size after deleting element : 3
+My Nodes: 56->30->70
